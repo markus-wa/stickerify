@@ -22,7 +22,7 @@ img.crossOrigin = 'anonymous';
 img.onload = () => {
   out.src = stickerify(img, 3, 'white').toDataURL();
 };
-img.src = 'https://i.imgur.com/CgGLydT.png';
+img.src = 'https://example.com/url-to-transparanet-img.png';
 ```
 
 `stickerify()` returns a [HTML5 canvas element](https://www.w3schools.com/html/html5_canvas.asp)
