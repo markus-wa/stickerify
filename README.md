@@ -15,7 +15,7 @@ const img = new Image(),
 
 img.crossOrigin = 'anonymous';
 img.onload = () => {
-  out.src = stickerify(img, 3, 'red').toDataURL();
+  out.src = stickerify(img, 3, 'white').toDataURL();
 };
 img.src = 'https://i.imgur.com/CgGLydT.png';
 ```
