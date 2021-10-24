@@ -6,7 +6,7 @@ Input:
 <img alt="input image" src="example/input.png" width="200px" />
 
 ```html
-<img id="out"\>
+<img id="out" />
 ```
 
 ```js
