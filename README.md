@@ -5,6 +5,11 @@ Input:
 
 <img alt="input image" src="example/input.png" width="200px" />
 
+Output:
+
+<img alt="stickerified image" src="example/stickerified.png" width="200px" />
+
+Sample code:
 ```html
 <img id="out"/>
 ```
@@ -20,6 +25,4 @@ img.onload = () => {
 img.src = 'https://i.imgur.com/CgGLydT.png';
 ```
 
-Output:
-
-<img alt="stickerified image" src="example/stickerified.png" width="200px" />
+`stickerify()` returns a [HTML5 canvas element](https://www.w3schools.com/html/html5_canvas.asp)
