@@ -9,8 +9,7 @@ interface Bound {
 function trim(c: HTMLCanvasElement) {
   const ctx = c.getContext("2d")!,
     copy = document.createElement("canvas").getContext("2d")!,
-    pixels = ctx.getImageData(0, 0, c.width, c.height),
-    l = pixels.data.length;
+    pixels = ctx.getImageData(0, 0, c.width, c.height);
 
   let x: number,
     y: number,
@@ -21,7 +20,7 @@ function trim(c: HTMLCanvasElement) {
       bottom: null,
     };
 
-  for (let i = 0; i < l; i += 4) {
+  for (let i = 0; i < pixels.data.length; i += 4) {
     if (pixels.data[i + 3] !== 0) {
       x = (i / 4) % c.width;
       y = ~~(i / 4 / c.width);
