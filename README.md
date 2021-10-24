@@ -9,7 +9,7 @@ Output:
 
 <img alt="stickerified image" src="example/stickerified.png" width="200px" />
 
-Sample code:
+## Sample code
 ```html
 <img id="out"/>
 ```
@@ -26,3 +26,11 @@ img.src = 'https://i.imgur.com/CgGLydT.png';
 ```
 
 `stickerify()` returns a [HTML5 canvas element](https://www.w3schools.com/html/html5_canvas.asp)
+
+## Install
+
+    yarn add stickerify
+
+or
+
+    npm install stickerify
