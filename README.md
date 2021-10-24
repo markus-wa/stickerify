@@ -20,6 +20,6 @@ img.onload = () => {
 img.src = 'https://i.imgur.com/CgGLydT.png';
 ```
 
-Output (:warning: this example is a bit extreme for demo effects, it looks much better on most images):
+Output:
 
 <img alt="stickerified image" src="example/stickerified.png" width="200px" />
