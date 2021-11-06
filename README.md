@@ -9,7 +9,12 @@ Output:
 
 <img alt="stickerified image" src="example/stickerified.png" width="200px" />
 
+## Live Demo
+
+Check out this codepen demo: https://codepen.io/markus-wa/pen/eYEMvxd - thanks to [@pento](https://github.com/pento) for letting me steal this!
+
 ## Sample code
+
 ```html
 <img id="out"/>
 ```
