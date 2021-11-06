@@ -49,8 +49,8 @@ function trim(c: HTMLCanvasElement) {
     }
   }
 
-  const trimHeight = bound.bottom! - bound.top!,
-    trimWidth = bound.right! - bound.left!,
+  const trimHeight = bound.bottom! - bound.top! + 1,
+    trimWidth = bound.right! - bound.left! + 1,
     trimmed = ctx.getImageData(bound.left!, bound.top!, trimWidth, trimHeight);
 
   copy.canvas.width = trimWidth;
