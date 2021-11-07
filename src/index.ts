@@ -3,7 +3,8 @@ import trim from "./trim";
 function stickerify(
   img: HTMLImageElement,
   thickness: number = 1,
-  fillStyle: string | CanvasGradient | CanvasPattern = "white"
+  fillStyle: string | CanvasGradient | CanvasPattern = "white",
+  samples: number = 36
 ) {
   const canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d")!;
@@ -14,7 +15,7 @@ function stickerify(
   canvas.width = img.width + 2 * x;
   canvas.height = img.height + 2 * y;
 
-  for (let angle = 0; angle < 360; angle += 10)
+  for (let angle = 0; angle < 360; angle += 360 / samples) {
     ctx.drawImage(
       img,
       thickness * Math.sin( ( Math.PI * 2 * angle ) / 360 ) + x,
