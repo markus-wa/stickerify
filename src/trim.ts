@@ -1,3 +1,5 @@
+import { Canvas, createCanvas, NodeCanvasRenderingContext2D } from "canvas";
+
 // trim(canvas) taken from https://gist.github.com/remy/784508
 interface Bound {
   top: number | null;
@@ -6,9 +8,9 @@ interface Bound {
   bottom: number | null;
 }
 
-function trim(c: HTMLCanvasElement) {
-  const ctx = c.getContext("2d")!,
-    copy = document.createElement("canvas").getContext("2d")!,
+function trim(c: Canvas | HTMLCanvasElement): Canvas | HTMLCanvasElement {
+  const ctx = c.getContext("2d")! as NodeCanvasRenderingContext2D | CanvasRenderingContext2D,
+    copy = createCanvas(c.width, c.height).getContext("2d")!,
     pixels = ctx.getImageData(0, 0, c.width, c.height);
 
   let x: number,
