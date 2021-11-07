@@ -18,9 +18,10 @@ function stickerify(
   for (let angle = 0; angle < 360; angle += 360 / samples) {
     ctx.drawImage(
       img,
-      thickness * Math.sin( ( Math.PI * 2 * angle ) / 360 ) + x,
-      thickness * Math.cos( ( Math.PI * 2 * angle ) / 360 ) + y
+      thickness * Math.sin((Math.PI * 2 * angle) / 360) + x,
+      thickness * Math.cos((Math.PI * 2 * angle) / 360) + y
     );
+  }
 
   ctx.globalCompositeOperation = "source-in";
   ctx.fillStyle = fillStyle;
