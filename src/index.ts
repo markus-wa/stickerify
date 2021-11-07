@@ -8,27 +8,17 @@ function stickerify(
   const canvas = document.createElement("canvas"),
     ctx = canvas.getContext("2d")!;
 
-  const offsetArr = [
-      [-1, -1],
-      [0, -1],
-      [1, -1],
-      [-1, 0],
-      [1, 0],
-      [-1, 1],
-      [0, 1],
-      [1, 1],
-    ],
-    x = thickness + 1, // 1px buffer in case of rounding errors etc.
+  const x = thickness + 1, // 1px buffer in case of rounding errors etc.
     y = thickness + 1;
 
   canvas.width = img.width + 2 * x;
   canvas.height = img.height + 2 * y;
 
-  for (let i = 0; i < offsetArr.length; i++)
+  for (let angle = 0; angle < 360; angle += 10)
     ctx.drawImage(
       img,
-      offsetArr[i][0] * thickness + x,
-      offsetArr[i][1] * thickness + y
+      thickness * Math.sin( ( Math.PI * 2 * angle ) / 360 ) + x,
+      thickness * Math.cos( ( Math.PI * 2 * angle ) / 360 ) + y
     );
 
   ctx.globalCompositeOperation = "source-in";
