@@ -3,11 +3,11 @@ Add sticker-like border effect to images with transparency
 
 Input:
 
-<img alt="input image" src="example/input.png" width="200px" />
+<img alt="input image" src="https://user-images.githubusercontent.com/5138316/140805201-fdad742e-4c7b-4c5e-8f80-9e6bba4b10a9.png" width="200px" />
 
 Output:
 
-<img alt="stickerified image" src="example/stickerified.png" width="200px" />
+<img alt="stickerified image" src="https://user-images.githubusercontent.com/5138316/140805105-222f0edf-4647-485b-8b98-66a4820d3390.png" width="200px" />
 
 ## Live Demo
 
