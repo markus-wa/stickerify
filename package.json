@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@types/node": "^16.11.4",
+	"canvas" : "^2.8.0",
     "typescript": "^4.4.4"
   },
   "devDependencies": {

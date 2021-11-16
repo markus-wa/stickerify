@@ -1,19 +1,19 @@
+import { createCanvas, Canvas, Image } from "canvas";
+
 import trim from "./trim";
 
 function stickerify(
-  img: HTMLImageElement,
+  img: Image | HTMLImageElement,
   thickness: number = 1,
   fillStyle: string | CanvasGradient | CanvasPattern = "white",
   samples: number = 36
-) {
-  const canvas = document.createElement("canvas"),
-    ctx = canvas.getContext("2d")!;
+): Canvas | HTMLCanvasElement {
 
   const x = thickness + 1, // 1px buffer in case of rounding errors etc.
     y = thickness + 1;
 
-  canvas.width = img.width + 2 * x;
-  canvas.height = img.height + 2 * y;
+  const canvas = createCanvas(img.width + x * 2, img.height + y * 2),
+    ctx = canvas.getContext("2d")!;
 
   for (let angle = 0; angle < 360; angle += 360 / samples) {
     ctx.drawImage(
@@ -34,15 +34,3 @@ function stickerify(
 }
 
 export { stickerify };
-
-/*
-    // example:
-
-    const img = new Image();
-
-    img.crossOrigin = 'anonymous';
-    img.onload = () => {
-      out.src = stickerify(img, 3).toDataURL();
-    };
-    img.src = 'https://i.imgur.com/CgGLydT.png';
-  */
