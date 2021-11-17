@@ -15,7 +15,7 @@ Check out this codepen demo: https://codepen.io/markus-wa/pen/eYEMvxd - thanks t
 
 ## Sample code
 
-Stickerify can run in a web browser, or in a Node.js environment. For Node.js, you should use the (`canvas`)[https://www.npmjs.com/package/canvas] module for image loading, as this is what Stickerify uses internally for image processing.
+Stickerify can run in a web browser, or in a Node.js environment. For Node.js, you should use the [`canvas`](https://www.npmjs.com/package/canvas) module for image loading, as this is what Stickerify uses internally for image processing.
 
 ### HTML
 
