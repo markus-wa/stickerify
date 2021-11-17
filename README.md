@@ -1,4 +1,5 @@
 # stickerify
+
 Add sticker-like border effect to images with transparency
 
 Input:
@@ -20,18 +21,18 @@ Stickerify can run in a web browser, or in a Node.js environment. For Node.js, y
 ### HTML
 
 ```html
-<img id="out"/>
+<img id="out" />
 ```
 
 ```js
 const img = new Image(),
-  out = document.getElementById("out");
+	out = document.getElementById('out');
 
-img.crossOrigin = "anonymous";
+img.crossOrigin = 'anonymous';
 img.onload = () => {
-  out.src = stickerify(img, 3, "white").toDataURL();
+	out.src = stickerify(img, 3, 'white').toDataURL();
 };
-img.src = "https://raw.githubusercontent.com/markus-wa/stickerify/main/example/input.png";
+img.src = 'https://raw.githubusercontent.com/markus-wa/stickerify/main/example/input.png';
 ```
 
 When run in the browser, `stickerify()` returns a [HTML5 canvas element](https://www.w3schools.com/html/html5_canvas.asp).
@@ -39,14 +40,14 @@ When run in the browser, `stickerify()` returns a [HTML5 canvas element](https:/
 ### Node.js
 
 ```js
-const { stickerify } = require("stickerify");
-const { loadImage } = require( "canvas" );
-const { writeFile } = require( "fs" );
+const { stickerify } = require('stickerify');
+const { loadImage } = require('canvas');
+const { writeFile } = require('fs');
 
-loadImage("https://raw.githubusercontent.com/markus-wa/stickerify/main/example/input.png")
-  .then(image => stickerify(image, 3, "white"))
-  .then(image => stickerify(image, 1, "grey"))
-  .then(canvas => writeFile("output.png", canvas.toBuffer(), err => console.log(err || "done")));
+loadImage('https://raw.githubusercontent.com/markus-wa/stickerify/main/example/input.png')
+	.then((image) => stickerify(image, 3, 'white'))
+	.then((image) => stickerify(image, 1, 'grey'))
+	.then((canvas) => writeFile('output.png', canvas.toBuffer(), (err) => console.log(err || 'done')));
 ```
 
 When run in Node.js, `stickerify()` returns a [Canvas](https://www.npmjs.com/package/canvas) object.
