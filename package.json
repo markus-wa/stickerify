@@ -1,6 +1,6 @@
 {
 	"name": "stickerify",
-	"version": "0.2.0",
+	"version": "0.2.2",
 	"description": "add sticker outline to images with transparent edges",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
