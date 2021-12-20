@@ -3,7 +3,8 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: weekly
-      day: monday
-      time: '04:00'
+      interval: monthly
     open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: '@types/node'
+        versions: ["17.x"]
